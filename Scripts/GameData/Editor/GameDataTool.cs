@@ -19,7 +19,7 @@ public class GameDataTool : EditorWindow
         EditorWindow.GetWindow(typeof(GameDataTool));
     }
 
-    string create_script_path { get { return string.Format("{0}/2_Scripts/GameData/GameDatas", Application.dataPath); } }
+    string create_script_path { get { return string.Format("{0}/Scripts/GameData/GameDatas", Application.dataPath); } }
     string m_crate_Script_name;
 
     void OnGUI()
