@@ -14,12 +14,23 @@ using UnityEngine;
 public class GameDataManager : ClassSingleton<GameDataManager>, IManager
 {
     protected Dictionary<System.Type, IProxyGameData> m_dataList;
+    protected bool m_isInit;
+
+    public GameDataManager()
+    {
+        Init();
+    }
 
     public void Init()
     {
+        if (m_isInit == true)
+            return;
+
         GameDataCreate _create = new GameDataCreate_Local();
         m_dataList = _create.Create();
-        Load();       
+        Load();
+
+        m_isInit = true;
     }  
 
     public void Load()

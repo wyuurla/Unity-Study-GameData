@@ -13,6 +13,7 @@ public class GameDataCreate_Local : GameDataCreate
     public override Dictionary<System.Type, IProxyGameData> Create()
     {
         Dictionary<System.Type, IProxyGameData> _list = new Dictionary<System.Type, IProxyGameData>();
+      
         return _list;
     }
 }
